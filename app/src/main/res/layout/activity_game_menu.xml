@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameMenuActivity">
+
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="247dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#2296EF"
+        android:text="Start Game!"
+        android:textSize="28sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="194dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#2296EF"
+        android:text="Back"
+        android:textSize="18sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
+
+    <TextView
+        android:id="@+id/playerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Players"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startGameButton" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="314dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toTopOf="@+id/playerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startGameButton">
+
+        <EditText
+            android:id="@+id/gridSizeYInput"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:text="9"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.866"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/gridSizeXInput"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="00"
+            android:inputType="number"
+            android:text="5"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.576"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gridDimensionsText"
+            android:layout_width="33dp"
+            android:layout_height="37dp"
+            android:text="X"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.711"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gridSizeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grid Size:"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.44" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/addPlayerButton"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#2296EF"
+        android:text="+"
+        android:textSize="24sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/playerText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toEndOf="@+id/playerText"
+        app:layout_constraintTop_toTopOf="@+id/playerText" />
+
+    <LinearLayout
+        android:id="@+id/playerListLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerText"
+        app:layout_constraintVertical_bias="0.00999999" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
